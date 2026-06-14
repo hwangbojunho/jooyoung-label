@@ -21,7 +21,9 @@
     <div class="container">
         <div class="product-grid">
             <div class="product-card" th:each="product : ${products}">
-                <div class="product-thumb">이미지 준비중</div>
+                <div class="product-thumb">
+                    <img th:src="@{${product.image()}}" th:alt="${product.name()}">
+                </div>
                 <div class="product-info">
                     <h3 th:text="${product.name()}">상품명</h3>
                     <p th:text="${product.description()}">상품 설명</p>

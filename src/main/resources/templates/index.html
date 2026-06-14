@@ -12,11 +12,11 @@
 
 <section class="hero">
     <div class="container">
-        <h1>디자인을 그대로, 완성된 옷으로</h1>
+        <h1>옷에 담기는 작은 디테일, 라벨</h1>
         <p>
-            <span th:text="${siteName}">OO어패럴</span>는 의류 브랜드의 디자인을 받아
-            기획부터 생산까지 책임지는 의류 제조 전문 업체입니다.
-            세터(SETTER) 등 다양한 브랜드의 의류를 안정적으로 제작해 왔습니다.
+            <span th:text="${siteName}">주영라벨</span>는 의류 브랜드의 디자인을 받아
+            우븐 라벨, 케어 라벨, 행택, 프린트 라벨을 제작하는 의류 라벨 전문 업체입니다.
+            세터(SETTER) 등 다양한 브랜드의 라벨을 안정적으로 제작해 왔습니다.
         </p>
         <a class="btn" th:href="@{/contact}">제작 문의하기</a>
     </div>
@@ -24,20 +24,21 @@
 
 <section class="section">
     <div class="container">
+        <img th:src="@{/images/labels-hero.jpg}" alt="라벨 제품 예시" style="width:100%; border-radius: 8px; margin-bottom: 40px;">
         <h2>이런 일을 합니다</h2>
-        <p class="section-desc">디자인 시안을 받아 패턴 제작부터 봉제, 검수까지 전 과정을 진행합니다.</p>
+        <p class="section-desc">디자인 시안을 받아 라벨 종류별 제작부터 검수까지 전 과정을 진행합니다.</p>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>패턴 &amp; 샘플 제작</h3>
-                <p>전달받은 디자인을 바탕으로 패턴을 뜨고 샘플을 제작하여 핏과 디테일을 확인합니다.</p>
+                <h3>우븐 &amp; 프린트 라벨</h3>
+                <p>브랜드 로고와 디자인을 직조 또는 인쇄 방식으로 메인 라벨에 구현합니다.</p>
             </div>
             <div class="feature-card">
-                <h3>봉제 &amp; 생산</h3>
-                <p>확정된 샘플을 기준으로 일정 수량의 옷을 균일한 품질로 생산합니다.</p>
+                <h3>케어 라벨</h3>
+                <p>소재, 세탁 방법 등 필수 정보를 담은 케어 라벨을 제작합니다.</p>
             </div>
             <div class="feature-card">
-                <h3>검수 &amp; 출고</h3>
-                <p>완성된 제품은 꼼꼼한 품질 검수를 거쳐 브랜드사에 출고됩니다.</p>
+                <h3>행택 &amp; 검수</h3>
+                <p>제품 태그용 행택을 제작하고, 완성된 라벨은 꼼꼼한 검수를 거쳐 출고됩니다.</p>
             </div>
         </div>
     </div>
@@ -46,7 +47,7 @@
 <section class="section section-alt">
     <div class="container">
         <h2>함께한 작업</h2>
-        <p class="section-desc">지금까지 진행한 작업물 일부를 소개합니다.</p>
+        <p class="section-desc">지금까지 제작한 라벨 작업물 일부를 소개합니다.</p>
         <a class="btn" th:href="@{/products}">작업물 더 보기</a>
     </div>
 </section>

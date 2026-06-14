@@ -15,7 +15,7 @@ public class PageController {
 
     @ModelAttribute("siteName")
     public String siteName() {
-        return "명훈어패럴";
+        return "주영라벨";
     }
 
     @GetMapping("/")
@@ -34,10 +34,10 @@ public class PageController {
     public String products(Model model) {
         model.addAttribute("activePage", "products");
         model.addAttribute("products", List.of(
-                new Product("세터 후드 집업", "세터(SETTER) 브랜드 발주, 기모 후드 집업 생산"),
-                new Product("세터 트레이닝 세트", "세터(SETTER) 브랜드 발주, 상하 트레이닝 세트 생산"),
-                new Product("기획 의류 샘플 제작", "신규 브랜드 의뢰, 디자인 시안 기반 샘플 제작"),
-                new Product("단체 유니폼 생산", "기업/단체 의뢰, 유니폼 대량 생산")
+                new Product("우븐 라벨", "세터(SETTER) 브랜드 발주, 메인 넥 라벨 직조 제작", "/images/woven-label.jpg"),
+                new Product("케어 라벨", "세탁/취급 안내가 담긴 케어 라벨 인쇄 제작", "/images/care-label.jpg"),
+                new Product("행택", "제품 태그용 행택 디자인 및 제작", "/images/hang-tag.jpg"),
+                new Product("프린트 라벨", "브랜드 로고 인쇄 라벨 제작", "/images/printed-label.jpg")
         ));
         return "products";
     }
