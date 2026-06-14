@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${siteName} + ' | 작업물'">OO어패럴</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/layout :: header(activePage='products')}"></div>
+
+<section class="hero">
+    <div class="container">
+        <h1>작업물</h1>
+        <p>지금까지 진행한 생산 작업의 일부를 소개합니다. (사진은 추후 업데이트됩니다)</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card" th:each="product : ${products}">
+                <div class="product-thumb">이미지 준비중</div>
+                <div class="product-info">
+                    <h3 th:text="${product.name()}">상품명</h3>
+                    <p th:text="${product.description()}">상품 설명</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+
+</body>
+</html>

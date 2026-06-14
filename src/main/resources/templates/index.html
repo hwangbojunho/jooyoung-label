@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${siteName} + ' | 홈'">OO어패럴</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/layout :: header(activePage='home')}"></div>
+
+<section class="hero">
+    <div class="container">
+        <h1>디자인을 그대로, 완성된 옷으로</h1>
+        <p>
+            <span th:text="${siteName}">OO어패럴</span>는 의류 브랜드의 디자인을 받아
+            기획부터 생산까지 책임지는 의류 제조 전문 업체입니다.
+            세터(SETTER) 등 다양한 브랜드의 의류를 안정적으로 제작해 왔습니다.
+        </p>
+        <a class="btn" th:href="@{/contact}">제작 문의하기</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>이런 일을 합니다</h2>
+        <p class="section-desc">디자인 시안을 받아 패턴 제작부터 봉제, 검수까지 전 과정을 진행합니다.</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>패턴 &amp; 샘플 제작</h3>
+                <p>전달받은 디자인을 바탕으로 패턴을 뜨고 샘플을 제작하여 핏과 디테일을 확인합니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>봉제 &amp; 생산</h3>
+                <p>확정된 샘플을 기준으로 일정 수량의 옷을 균일한 품질로 생산합니다.</p>
+            </div>
+            <div class="feature-card">
+                <h3>검수 &amp; 출고</h3>
+                <p>완성된 제품은 꼼꼼한 품질 검수를 거쳐 브랜드사에 출고됩니다.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>함께한 작업</h2>
+        <p class="section-desc">지금까지 진행한 작업물 일부를 소개합니다.</p>
+        <a class="btn" th:href="@{/products}">작업물 더 보기</a>
+    </div>
+</section>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+
+</body>
+</html>

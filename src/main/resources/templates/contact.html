@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${siteName} + ' | 연락처'">OO어패럴</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="~{fragments/layout :: header(activePage='contact')}"></div>
+
+<section class="hero">
+    <div class="container">
+        <h1>연락처</h1>
+        <p>제작 의뢰, 견적 문의는 아래 정보로 연락해 주세요.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container contact-grid">
+        <div class="contact-info">
+            <h2>오시는 길</h2>
+            <dl>
+                <dt>주소</dt>
+                <dd>OO시 OO구 OO로 00, 0층</dd>
+                <dt>전화</dt>
+                <dd>00-0000-0000</dd>
+                <dt>이메일</dt>
+                <dd>contact@example.com</dd>
+                <dt>운영 시간</dt>
+                <dd>평일 09:00 ~ 18:00 (주말/공휴일 휴무)</dd>
+            </dl>
+        </div>
+
+        <div class="contact-form">
+            <h2>문의하기</h2>
+            <p th:if="${submitted}" class="section-desc">
+                <strong th:text="${submittedName}">고객님</strong>님, 문의가 접수되었습니다. 빠르게 연락드리겠습니다.
+            </p>
+            <form th:action="@{/contact}" method="post">
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">문의 보내기</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div th:replace="~{fragments/layout :: footer}"></div>
+
+</body>
+</html>
